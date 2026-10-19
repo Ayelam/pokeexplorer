@@ -1,7 +1,7 @@
 //Lista de type, la api contiene valor
 const tipos = [
   {valor: 'normal', nombre: 'Normal'},
-  {valor: 'fire', nombre: 'Fireo'},
+  {valor: 'fire', nombre: 'Fire'},
   {valor: 'water', nombre: 'Water'},
   {valor: 'grass', nombre: 'Grass'},
   {valor: 'electric', nombre: 'Electric'},
