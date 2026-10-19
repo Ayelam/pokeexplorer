@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
-import {listaPkm } from '../services/serviciopk'
+import {useState,useEffect} from 'react'
+import {listaPkm} from '../services/serviciopk'
 
 //El hook trae y guarda la lista de los pokemon
 export function usePokemones() 

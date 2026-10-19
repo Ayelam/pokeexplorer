@@ -8,11 +8,18 @@ export async function listaPkm(cantidad = 100, desde = 0)
 
   return datos
 }
-
 //Informacion de Pokemon por nombre
 export async function infPkm(nombre) 
 {
   const respuesta = await fetch(`${url_api}/pokemon/${nombre}`)
+  const datos = await respuesta.json()
+
+  return datos
+}
+//Tipo de Pkm
+export async function tipoPkm(tipo) 
+{
+  const respuesta = await fetch(`${url_api}/type/${tipo}`)
   const datos = await respuesta.json()
 
   return datos

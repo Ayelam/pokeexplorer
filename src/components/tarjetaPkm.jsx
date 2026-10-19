@@ -1,4 +1,4 @@
-export function TarjetaPkm({ pokemon }) //Tarjeta de los datos de cada Pokemon
+export function TarjetaPkm({pokemon}) //Tarjeta de los datos de cada Pokemon
 {
   const partes = pokemon.url.split('/') //cortamos la url por cada "/"
   const id = partes[partes.length - 2] //el numero esta en la penultima posicion
