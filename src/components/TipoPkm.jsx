@@ -1,23 +1,23 @@
 //Lista de type, la api contiene valor
 const tipos = [
   {valor: 'normal', nombre: 'Normal'},
-  {valor: 'fire', nombre: 'Fuego'},
-  {valor: 'water', nombre: 'Agua'},
-  {valor: 'grass', nombre: 'Planta'},
-  {valor: 'electric', nombre: 'Electrico'},
-  {valor: 'ice', nombre: 'Hielo'},
-  {valor: 'fighting', nombre: 'Lucha'},
-  {valor: 'poison', nombre: 'Veneno'},
-  {valor: 'ground', nombre: 'Tierra'},
-  {valor: 'flying', nombre: 'Volador'},
-  {valor: 'psychic', nombre: 'Psiquico'},
-  {valor: 'bug', nombre: 'Bicho'},
-  {valor: 'rock', nombre: 'Roca'},
-  {valor: 'ghost', nombre: 'Fantasma'},
+  {valor: 'fire', nombre: 'Fireo'},
+  {valor: 'water', nombre: 'Water'},
+  {valor: 'grass', nombre: 'Grass'},
+  {valor: 'electric', nombre: 'Electric'},
+  {valor: 'ice', nombre: 'Ice'},
+  {valor: 'fighting', nombre: 'Fighting'},
+  {valor: 'poison', nombre: 'Poison'},
+  {valor: 'ground', nombre: 'Ground'},
+  {valor: 'flying', nombre: 'Flying'},
+  {valor: 'psychic', nombre: 'Psychic'},
+  {valor: 'bug', nombre: 'Bug'},
+  {valor: 'rock', nombre: 'Rock'},
+  {valor: 'ghost', nombre: 'Ghost'},
   {valor: 'dragon', nombre: 'Dragon'},
-  {valor: 'dark', nombre: 'Siniestro'},
-  {valor: 'steel', nombre: 'Acero'},
-  {valor: 'fairy', nombre: 'Hada'}
+  {valor: 'dark', nombre: 'Dark'},
+  {valor: 'steel', nombre: 'Steel'},
+  {valor: 'fairy', nombre: 'Fairy'}
 ]
 
 //Filtro por tipo de pkm
