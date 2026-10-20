@@ -1,5 +1,6 @@
 import {useState,useEffect} from 'react'
 import {infPkm} from '../services/serviciopk'
+import {coloresTp} from '../utils/coloresTp'
 
 //Tarjeta de los datos de cada Pokemon
 export function TarjetaPkm({pokemon}) 
@@ -16,19 +17,39 @@ export function TarjetaPkm({pokemon})
   useEffect(() => {
     async function cargarTipos() 
     {
-      const datos = await infPkm(pokemon.name) //detalle completo del pokemon
-      const lista = datos.types.map((t) => t.type.name) //se extrae el nobre de cada tipo
-      setTipos(lista)
+      try 
+      {
+        const datos = await infPkm(pokemon.name) //detalle completo del pokemon
+        const lista = datos.types.map((t) => t.type.name) //se extrae el nombre de cada tipo
+        setTipos(lista)
+      } 
+      catch (fallo) 
+      {
+        setTipos([]) //si falla, la tarjeta se queda sin tipos (pero no rompe la app)
+      }
     }
     cargarTipos()
   }, [pokemon.name])
 
+  //color del primer tipo para el borde y el encabezado
+  const colorPrincipal = tipos.length > 0 ? coloresTp[tipos[0]] : '#ccc'
+
   return (
-    <div className="tarjeta">
+    <div className="tarjeta" style={{ borderColor: colorPrincipal }}>
+      <div className="tarjeta-top" style={{ backgroundColor: colorPrincipal }}>
+        <span className="nombre">{pokemon.name}</span>
+        <span className="numero">#{id}</span>
+      </div>
+
       <img src={imagen} alt={pokemon.name} />
-      <p>#{id}</p>
-      <h3>{pokemon.name}</h3>
-      <p>{tipos.join(', ')}</p>
+
+      <div className="tipos">
+        {tipos.map((tipo) => (
+          <span key={tipo} className="pill" style={{backgroundColor: coloresTp[tipo] }}>
+            {tipo}
+          </span>
+        ))}
+      </div>
     </div>
   )
 }

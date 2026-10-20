@@ -1,7 +1,7 @@
 const url_api = 'https://pokeapi.co/api/v2' //Direccion de la api
 
 //Solicitud de la lista pokemon
-export async function listaPkm(cantidad = 100, desde = 0) 
+export async function listaPkm(cantidad = 1400, desde = 0) 
 {
   const respuesta = await fetch(`${url_api}/pokemon?limit=${cantidad}&offset=${desde}`) //Peticion a la api
 

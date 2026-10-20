@@ -1,6 +1,8 @@
 import {useState,useEffect} from 'react'
 import {listaPkm} from '../services/serviciopk'
 
+export const mostrados = 25 //muestra de pkm por pagina
+
 //El hook trae y guarda la lista de los pokemon
 export function usePokemones() 
 {
@@ -15,7 +17,7 @@ export function usePokemones()
     {
       try 
       {
-        const datos = await listaPkm() //Llama al servicio
+        const datos = await listaPkm(100000, 0) //pedimos todos de una
         setPokemones(datos.results) //Guarda solo la lista
       } 
       catch (fallo) 
@@ -31,5 +33,5 @@ export function usePokemones()
     cargarPkm()
   }, []) //se ejecuta una vez
 
-  return { pokemones, cargando, error }//se devuelven las 3 variables
+  return { pokemones, cargando, error }//se devuelven las variables
 }
